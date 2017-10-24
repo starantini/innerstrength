@@ -1,4 +1,6 @@
 class WelcomeController < ApplicationController
+
+  
   def home
     @subscriber = Subscriber.new(params[:subscriber])
   end
