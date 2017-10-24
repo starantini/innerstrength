@@ -21,7 +21,5 @@ class WelcomeController < ApplicationController
         type: "application/mp3"
     )
   end
-  def subscriber_params
-    params.require(:subscriber).permit(:email)
-  end
+
 end
