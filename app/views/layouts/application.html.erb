@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <title>innerstrength</title>
+    <%= csrf_meta_tags %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload'  %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-eval' => false %>
+
+  </head>
+
+  <body style="padding-top: 20px">
+
+    <div class="container-fluid" style="padding-bottom: 5px">
+
+      <div>
+      <a href="/"><img src="/assets/logo.png" style="align:center; max-height:300; max-width:250px"></a>
+      </div>
+      <hr style="margin-top:20px;"></hr>
+
+  	  <div id="nav" style="padding-top: 8px;" >
+        <div class="row justify-content-start">
+<div class="col-md-4" style="display:inline-block;">
+
+          <li>
+            <a class="btn btn-secondary btn-sm" role="button" style="text-decoration:none;border-color:#fff;padding:5spx;" href="audios">
+           audios</a>
+         </li>
+
+          <li>
+            <a class="btn btn-secondary btn-sm" role="button" style="text-decoration:none;border-color:#fff;padding:5px;" href="writings">
+           archive</a>
+         </li>
+
+  			   <li>
+             <a class="btn btn-secondary btn-sm" role="button" style="text-decoration:none;border-color:#fff;padding:5px;" href="about">
+            about</a>
+          </li>
+</div>
+
+
+<div class="col-md-4" style="display: inline-block;padding-bottom:0px; padding-left:0px;margin-bottom:8px; text-align: right">
+
+
+    <%= form_for(@subscriber) do |f| %>
+  <div class="input-group"style="text-align:left">
+      <%= f.text_field :email, class: 'form-control-xsm', placeholder: 'email' ,maxlength:"23"%>
+      <span class="input-group-btn">
+        <input class="btn btn-secondary btn-sm" type="submit" value="subscribe"></span>
+
+<% end %>
+</div>
+</div>
+<div class="col-md-4" style="display: inline-block;padding-bottom:0px; text-align: right">
+          <a href="https://soundcloud.com/innerstrengthaudios" target="_blank" style="padding-right:10px;"> <i class="fa fa-soundcloud fa-lg" aria-hidden="true"></i></a>
+
+          <span>   </span>
+
+          <a href="https://www.instagram.com/oenomel.us/" target="_blank" style="padding-right:5px;"> <i class="fa fa-instagram fa-lg " aria-hidden="true"></i></a>
+
+             <span>   </span>
+
+          <a href="https://www.youtube.com/channel/UC_doiTSepvAc2EHDFR4XR2A" target="_blank" style="padding-right:5px;"> <i class="fa fa-youtube fa-lg " aria-hidden="true"></i></a>
+</div>
+
+       </div>
+     </div>
+       <hr style="margin-bottom:20px;"></hr>
+      </div>
+     </div>
+
+
+    </div>
+  </div>
+    </div>
+
+  </body>
+    <%= yield %>
+<div class="container-fluid">
+  <footer>
+  <div id="nav">
+    <ul>
+     <li> <a style="text-decoration:none" href="about">about</a></li>
+     <span style="padding:40px"> • </span>
+     <li> contact: oenomel.us@mail.com </li>
+     <span style="color: #C0C0C0; padding-left:40px"> | </span>
+     <li>
+       <a href="https://www.instagram.com/oenomel.us/" target="_blank"> <i class="fa fa-instagram fa-lg " aria-hidden="true"></i></a>
+     </li>
+     <span> </span>
+     <li>
+       <a href="http://www.pinterest.com/oenomel0808" target="_blank"> <i class="fa fa-youtube fa-lg " aria-hidden="true"></i></a>
+     </li>
+     <span>  </span>
+     <li>
+       <a href="https://www.instagram.com/dies.ist.uns/" target="_blank"> <i class="fa fa-twitter-square fa-lg" aria-hidden="true"></i></a>
+     </li>
+     <span>  </span>
+     <li>
+       <a href="https://www.facebook.com/oenomel.us" target="_blank"> <i class="fa fa-soundcloud fa-lg" aria-hidden="true"></i></a>
+     </li>
+    </ul>
+  </div>
+  </footer>
+</div>
+</html>
